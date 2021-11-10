@@ -14,9 +14,37 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
         title: const Text('Virtual Store - Login Screen'),
       ),
-      body: const Center(
-        child: Text('TODO://login_screen.dart'),
+      body: Center(
+        child: SingleChildScrollView(//Container(
+          child: Column(children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 60.0),
+              child: Center(
+                child:Container(
+                  child: Image.asset('asset'),
+                  width: 200,
+                  height: 150,
+                  ) ,
+              ),
+            ),
+            Padding(
+              
+              padding: EdgeInsets.only(left: 15, right: 15, top:0.0, bottom: 0),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                     hintText: 'Enter a valid Email'
+
+                  ),
+                  ),
+              ),
+            ),
+              
+             
+          ],),
+        ),
       ),
     );
+
   }
 }
