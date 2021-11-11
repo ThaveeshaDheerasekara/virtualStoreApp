@@ -21,25 +21,84 @@ class _LoginScreenState extends State<LoginScreen> {
               padding: const EdgeInsets.only(top: 60.0),
               child: Center(
                 child:Container(
-                  child: Image.asset('asset'),
+                  child: Image.asset('images/vglob.png'),
                   width: 200,
                   height: 150,
                   ) ,
               ),
             ),
             Padding(
-              
-              padding: EdgeInsets.only(left: 15, right: 15, top:0.0, bottom: 0),
+              padding: EdgeInsets.only(left: 15, right: 15, top:10.0, bottom: 0),
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                     hintText: 'Enter a valid Email'
-
                   ),
+                  labelText: 'User Name',
+                  hintText: 'Enter a valid Email'
                   ),
               ),
             ),
-              
+
+            Padding(
+              padding: EdgeInsets.only(
+                left: 15.0, 
+                right: 15.0, 
+                top: 15, 
+                bottom: 15,
+              ),
+              child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
+                    hintText: 'Enter secure password'
+                  ),
+                ),
+                
+            ),
+            
+            Container(
+              child: FlatButton(
+                onPressed: (){
+                  //function
+                },
+                child: Text('Forgot Password',
+                  style:TextStyle(
+                    fontSize: 15,
+                    color: Colors.blue,
+                    
+                    ),
+                    
+                ),
+              ),
+            ),
+            
+            Container(
+              height: 50,
+              width: 250,
+              decoration: BoxDecoration(
+                color: Colors.blue ,
+                borderRadius: BorderRadius.circular(16),
+                ),
+                child: FlatButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=> LoginScreen()));
+
+                  },
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                    ),
+                  ),
+                  ),
+            ),
+           
+            SizedBox(
+              height: 130,
+            ),
+            Text('New User? Create Account')  
              
           ],),
         ),
