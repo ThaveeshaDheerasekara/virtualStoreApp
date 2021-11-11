@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style:TextStyle(
                     fontSize: 15,
                     color: Colors.blue,
-                    
+
                     ),
                     
                 ),
@@ -98,7 +98,21 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 130,
             ),
-            Text('New User? Create Account')  
+            Container(
+              child: FlatButton(
+                onPressed: (){
+                  //function
+                },
+                child: Text('New User? Create Account',
+                  style:TextStyle(
+                    fontSize: 12,
+                  ),
+                    
+                ),
+              ),
+            ),
+            
+            
              
           ],),
         ),
